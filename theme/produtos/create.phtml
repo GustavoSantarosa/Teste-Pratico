@@ -1,0 +1,44 @@
+<?php $v->layout("..\_theme");?>
+<div class="container">
+    <div class="row">
+        <div class="col-md-8 order-md-1">
+            <h5>Produtos > Inserir</h5>
+            <hr>
+            <form action="<?= url("produtos/salvar");?>" method="POST">
+                <div class="mb-3">
+                    <label for="descricao">Descrição</label>
+                    <input type="text" class="form-control"id="descricao" placeholder="Descrição" required>
+                </div>
+                <div class="row">
+                    <div class="col-md-5 mb-3">
+                        <label for="country">Tipo</label>
+                        <select class="custom-select d-block w-100" id="country" required>
+                            <option value="">Selecione...</option>
+                            <option>1</option>
+                            <option>2</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6 mb-3">
+                        <label for="quantidade">Quantidade</label>
+                        <input type="text" class="form-control" id="quantidade" placeholder="Quantidade" required>
+                    </div>
+                    <div class="col-md-6 mb-3">
+                        <label for="valor">Valor</label>
+                        <input type="text" class="form-control" id="valor" placeholder="Valor" required>
+                    </div>
+                </div>
+                <hr class="mb-4">
+                <div class="row">
+                    <div class="col-md-6 mb-3">
+                        <button class="btn btn-primary btn-lg btn-block" type="submit">Inserir</button>
+                    </div>
+                    <div class="col-md-6 mb-3">
+                        <a href="<?= url("produtos/");?>" class="btn btn-primary btn-lg btn-block" role="button" aria-pressed="true">Voltar</a>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

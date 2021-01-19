@@ -13,6 +13,7 @@
     $route->group("produtos");
         $route->get("/",            "ProdutoController:index"     );
         $route->get("/inserir",     "ProdutoController:create"    );
+        $route->post("/salvar",     "ProdutoController:store"     );
     $route->group("vendas");
         $route->get("/",            "VendaController:index"       );
         $route->get("/inserir",     "VendaController:create"      );

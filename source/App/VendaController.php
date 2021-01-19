@@ -1,21 +1,30 @@
 <?php
-    namespace Source\App;
+namespace Source\App;
 
-    class VendaController {
-        public function __construct()
-        {
-            
-        }
+use League\Plates\Engine;
+use Source\Models\Produto;
 
-        public function index(): void{
-            echo "<h1>Venda Home</h1>";
-        }
 
-        public function create(): void{
-            echo "<h1>Inserir</h1>";
-        }
-
-        public function error(array $data): void{
-            echo "<h1>Erro {$data["errcode"]}</h1>";
-        }
+class VendaController {
+    public function __construct()
+    {
+        $this->view = Engine::create(__DIR__."/../../theme/vendas", "phtml");
     }
+
+    public function index(): void{
+        $produtos = (new Produto())->find()->fetch(true);
+        
+        echo $this->view->render("home", [
+            "title" => "Home | ".SITE,
+            "produtos" => $produtos
+        ]);
+    }
+
+    public function create(): void{
+        echo "<h1>Inserir</h1>";
+    }
+
+    public function error(array $data): void{
+        echo "<h1>Erro {$data["errcode"]}</h1>";
+    }
+}
