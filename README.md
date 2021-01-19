@@ -1,8 +1,11 @@
 # Teste Pratico
 
-
-# 1º Habilitar o pgsql dentro do php.ini.
-# 2º Instalar composer pelo link https://getcomposer.org/.
-# 3º rodar 'composer install'.
-# 4º compilar o arquivo sql 'db.sql' na raiz do projeto.
+##Passo 1
+- [Habilitar o pgsql dentro do php.ini].
+##Passo 2
+- [Instalar composer pelo link] (https://getcomposer.org/).
+##Passo 3
+- [rodar 'composer install'].
+##Passo 4
+- [compilar o arquivo sql 'db.sql' na raiz do projeto].
 
