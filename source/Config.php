@@ -1,6 +1,6 @@
 <?php 
 
-define("ROOT", "http://www.localhost/GustavoSantarosa/Teste-Pratico");
+define("ROOT", "http://www.localhost:8080");
 //define("ROOT", "http://www.localhost/");
 define("SITE", "Teste Pratico");
 
