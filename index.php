@@ -18,6 +18,9 @@
         $route->get("/",            "VendaController:index"       );
         $route->get("/inserir",     "VendaController:create"      );
 
+        $route->group("tipos");
+        $route->get("/",            "TipoController:index"       );
+
     $route->group("ops");
         $route->get("/{errcode}",   "Web:error"     );
 

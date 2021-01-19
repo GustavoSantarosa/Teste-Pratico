@@ -7,12 +7,12 @@
             <form action="<?= url("produtos/salvar");?>" method="POST">
                 <div class="mb-3">
                     <label for="descricao">Descrição</label>
-                    <input type="text" class="form-control"id="descricao" placeholder="Descrição" required>
+                    <input type="text" class="form-control"id="descricao" name="descricao" placeholder="Descrição" required>
                 </div>
                 <div class="row">
                     <div class="col-md-5 mb-3">
                         <label for="country">Tipo</label>
-                        <select class="custom-select d-block w-100" id="country" required>
+                        <select class="custom-select d-block w-100" id="country" name="tipo" required>
                             <option value="">Selecione...</option>
                             <option>1</option>
                             <option>2</option>
@@ -22,11 +22,11 @@
                 <div class="row">
                     <div class="col-md-6 mb-3">
                         <label for="quantidade">Quantidade</label>
-                        <input type="text" class="form-control" id="quantidade" placeholder="Quantidade" required>
+                        <input type="text" class="form-control" id="quantidade" name="quantidade" placeholder="Quantidade" required>
                     </div>
                     <div class="col-md-6 mb-3">
                         <label for="valor">Valor</label>
-                        <input type="text" class="form-control" id="valor" placeholder="Valor" required>
+                        <input type="text" class="form-control" id="valor" name="valor" placeholder="Valor" required>
                     </div>
                 </div>
                 <hr class="mb-4">

@@ -1,15 +1,16 @@
 <?php 
 
 define("ROOT", "http://www.localhost/GustavoSantarosa/Teste-Pratico");
+//define("ROOT", "http://www.localhost/");
 define("SITE", "Teste Pratico");
 
 define("DATA_LAYER_CONFIG", [
-    "driver"    => "mysql",
+    "driver"    => "pgsql",
     "host"      => "localhost",
-    "port"      => "3306",
+    "port"      => "5432",
     "dbname"    => "teste_pratico",
-    "username"  => "root",
-    "passwd"    => "",
+    "username"  => "postgres",
+    "passwd"    => "place123",
     "options"   => [
         PDO::MYSQL_ATTR_INIT_COMMAND    => "SET NAMES utf8",
         PDO::ATTR_ERRMODE               => PDO::ERRMODE_EXCEPTION,

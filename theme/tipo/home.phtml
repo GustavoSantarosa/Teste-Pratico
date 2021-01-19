@@ -1,0 +1,34 @@
+<?php $v->layout("..\_theme");?>
+<div class="container">
+    <div class="row">
+        <div class="col-md-12 order-md-1">
+            <h5>Produtos</h5>
+            <?php if($tipos):?>
+                <table class="table">
+                    <thead class="thead-dark">
+                        <tr>
+                        <th scope="col">#</th>
+                        <th scope="col">Descrição</th>
+                        <th scope="col">Imposto1</th>
+                        <th scope="col">Imposto2</th>
+                        <th scope="col">Criado em</th>
+                        <th scope="col">Atualizado em</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <?php foreach($tipos as $tipo):?>
+                            <tr>
+                                <th scope="row"><?= $tipo->id;?></th>
+                                <td><?= $tipo->descricao;?></td>
+                                <td><?= $tipo->imposto1;?></td>
+                                <td><?= $tipo->imposto2;?></td>
+                                <td><?= $tipo->created_at;?></td>
+                                <td><?= $tipo->updated_at;?></td>
+                            </tr>
+                        <?php endforeach;?>
+                    </tbody>
+                </table>
+            <?php endif;?>
+        </div>
+    </div>
+</div>

@@ -5,9 +5,14 @@ use League\Plates\Engine;
 use Source\Models\Produto;
 
 class ProdutoController {
-    public function __construct()
+
+    private $view;
+    private $router;
+
+    public function __construct($router)
     {
         $this->view = Engine::create(__DIR__."/../../theme/produtos", "phtml");
+        $this->router = $router;
     }
 
     public function index(): void{
@@ -26,19 +31,15 @@ class ProdutoController {
     }
     
     public function store(): void{
-
         $Produto = new Produto();
-            $Produto->__set("descricao", "affe");
-            $Produto->__set("tipo", 1);
-            $Produto->__set("quantidade", 3);
-            $Produto->__set("valor", 10.00);
-            $Produto->save();
+            $Produto->descricao     = $_POST["descricao"];
+            $Produto->tipo          = $_POST["tipo"];
+            $Produto->quantidade    = $_POST["quantidade"];
+            $Produto->valor         = $_POST["valor"];
+            var_dump($Produto->save());exit;
+            $Produto_id = $Produto->save();
 
-        $produtos = (new Produto())->find()->fetch(true);
-        echo $this->view->render("home", [
-            "title" => "Home | ".SITE,
-            "produtos" => $produtos
-        ]);
+        $this->router->redirect("produtos/");
     }
 
     public function error(array $data): void{
