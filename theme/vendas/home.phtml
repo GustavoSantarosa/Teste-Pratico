@@ -1,0 +1,7 @@
+<h1>home</h1>
+
+<?php if($vendas):?>
+    <?php foreach($vendas as $venda):?>
+    <?= $venda->descricao;?>
+    <?php endforeach;?>
+<?php endif;?>
